@@ -1,0 +1,92 @@
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+.classpath
+.project
+.settings/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+ENV/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+
+# PHP
+/vendor/
+composer.lock
+.env
+.
+
+# C/C++
+build/
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.so
+*.dll
+
+# Node / JavaScript / TypeScript
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+.vscode/
+
+# Databases
+*.sql
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+pgdata/
+
+# MySQL
+mysqldata/
+
+# MongoDB
+dump/
+data/
+
+# Docker
+.docker/
+**/docker-compose.override.yml
+docker-compose.override.yml
+docker-compose.*.yml
+**/Dockerfile.dev
+
+# Environment
+.env
+.env.*
+.env.local
+.env.production
+
+# OS / Editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Misc
+coverage/
+.scoverage
+.report/
