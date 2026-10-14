@@ -90,3 +90,7 @@ Thumbs.db
 coverage/
 .scoverage
 .report/
+
+# ClothConcept specific exclusions
+clothconcept/backend/venv/
+clothconcept/outputs/generated/

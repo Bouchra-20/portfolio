@@ -36,3 +36,7 @@ Ce dépôt est sous licence MIT. Voir le fichier LICENSE.
 
 ## Contact
 Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre le portfolio public.
+
+## Projets
+
+- [clothconcept](projets/clothconcept/README.md) – Application de personnalisation de vêtements avec backend Python et frontend React.
