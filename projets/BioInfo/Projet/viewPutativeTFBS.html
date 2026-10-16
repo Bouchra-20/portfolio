@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putative TFBS Viewer</title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">Visualisation des Sites de Liaison Putatifs aux Facteurs de Transcription</div>
+        <div class="controls">
+            <input type="file" id="jsonFile" accept=".json" style="display: none;">
+            <label for="jsonFile" class="file-upload-btn">Choisir un fichier JSON</label>
+        </div>
+        <div id="canvasContainer">
+            <canvas id="resultCanvas" width="880"></canvas>
+        </div>
+        <div id="tooltip" class="tooltip"></div>
+    </div>
+
+    <!-- Le script reste inchangé -->
+    <script>
+        const canvas = document.getElementById('resultCanvas');
+        const ctx = canvas.getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+
+        let globalResults = [];
+        let globalParameters = {};
+        let globalWindow = { start: null, end: null, totalScore: 0 };
+
+        function normalizeScores(scores) {
+            const minScore = Math.min(...scores);
+            const maxScore = Math.max(...scores);
+            const minHue = 180;
+            const maxHue = 240;
+
+            if (minScore === maxScore) {
+                return scores.map(() => (minHue + maxHue) / 2);
+            }
+
+            return scores.map(score => {
+                const normalized = (score - minScore) / (maxScore - minScore);
+                return minHue + normalized * (maxHue - minHue);
+            });
+        }
+
+        function drawResults(data) {
+            globalResults = data.results;
+            globalParameters = data.parameters;
+
+            if (!globalResults || globalResults.length === 0) {
+                alert("No results found in the JSON file.");
+                return;
+            }
+
+            const promoterHeight = 20;
+            const promoterSpacing = 30;
+            const totalHeight = globalResults.length * (promoterHeight + promoterSpacing) + promoterSpacing;
+
+            canvas.height = totalHeight;
+
+            let y = promoterSpacing;
+
+            const allScores = globalResults.flatMap(result => 
+                result.occurrences.map(occurrence => occurrence[4])
+            );
+            const normalizedHues = normalizeScores(allScores);
+
+            let hueIndex = 0;
+
+            globalResults.forEach(result => {
+                ctx.fillStyle = '#e0e6ed';
+                ctx.fillRect(0, y, canvas.width, promoterHeight);
+
+                result.occurrences.forEach((occurrence) => {
+                    const pos = occurrence[3];
+                    const score = occurrence[4];
+                    const hue = normalizedHues[hueIndex++];
+
+                    const x = Math.abs(pos) * (canvas.width / globalParameters.promotor_length);
+                    const occurrenceWidth = 10;
+                    const occurrenceHeight = promoterHeight;
+
+                    ctx.fillStyle = `hsl(${hue}, 80%, 50%)`;
+                    ctx.fillRect(x, y, occurrenceWidth, occurrenceHeight);
+                });
+
+                y += promoterHeight + promoterSpacing;
+            });
+
+            let allPositions = [];
+            globalResults.forEach(result => {
+                result.occurrences.forEach(occurrence => {
+                    allPositions.push(occurrence[3]);
+                });
+            });
+
+            if (allPositions.length > 0) {
+                const minPos = Math.min(...allPositions);
+                const maxPos = Math.max(...allPositions);
+                globalWindow.start = minPos;
+                globalWindow.end = maxPos;
+                globalWindow.totalScore = allScores.reduce((sum, score) => sum + score, 0);
+
+                const startX = Math.abs(minPos) * (canvas.width / globalParameters.promotor_length);
+                const endX = Math.abs(maxPos) * (canvas.width / globalParameters.promotor_length) + 10;
+                const windowStart = Math.min(startX, endX);
+                const windowEnd = Math.max(startX, endX);
+                const windowWidth = windowEnd - windowStart;
+
+                ctx.strokeStyle = '#e74c3c';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(
+                    windowStart,
+                    promoterSpacing,
+                    windowWidth,
+                    (globalResults.length * (promoterHeight + promoterSpacing))
+                );
+            }
+        }
+
+        document.getElementById('jsonFile').addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const data = JSON.parse(e.target.result);
+                    drawResults(data);
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        canvas.addEventListener('mousemove', (event) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;
+
+            tooltip.style.display = 'none';
+
+            const promoterHeight = 20;
+            const promoterSpacing = 30;
+            let tooltipSet = false;
+
+            let currentY = promoterSpacing;
+            for (const result of globalResults) {
+                for (const occurrence of result.occurrences) {
+                    const pos = occurrence[3];
+                    const score = occurrence[4];
+                    const x = Math.abs(pos) * (canvas.width / globalParameters.promotor_length);
+                    const occurrenceWidth = 10;
+
+                    if (
+                        mouseX >= x &&
+                        mouseX <= x + occurrenceWidth &&
+                        mouseY >= currentY &&
+                        mouseY <= currentY + promoterHeight
+                    ) {
+                        tooltip.style.display = 'block';
+                        tooltip.style.left = `${event.pageX + 10}px`;
+                        tooltip.style.top = `${event.pageY + 10}px`;
+                        tooltip.textContent = `Position: ${pos}, Score: ${score.toFixed(2)}`;
+                        tooltipSet = true;
+                        return;
+                    }
+                }
+                currentY += promoterHeight + promoterSpacing;
+            }
+
+            currentY = promoterSpacing;
+            for (const result of globalResults) {
+                const windowRange = result.window_range.split(":");
+                const startPos = parseInt(windowRange[0].replace("[", ""));
+                const endPos = parseInt(windowRange[1].replace("]", ""));
+                const windowStart = Math.abs(startPos) * (canvas.width / globalParameters.promotor_length);
+                const windowEnd = Math.abs(endPos) * (canvas.width / globalParameters.promotor_length);
+
+                if (
+                    mouseX >= windowStart &&
+                    mouseX <= windowEnd &&
+                    mouseY >= currentY &&
+                    mouseY <= currentY + promoterHeight &&
+                    !tooltipSet
+                ) {
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = `${event.pageX + 10}px`;
+                    tooltip.style.top = `${event.pageY + 10}px`;
+                    tooltip.textContent = `Window: ${result.window_range}, Score: ${result.window_score.toFixed(2)}`;
+                    tooltipSet = true;
+                }
+                currentY += promoterHeight + promoterSpacing;
+            }
+
+            if (globalWindow.start !== null && globalWindow.end !== null && !tooltipSet) {
+                const startX = Math.abs(globalWindow.start) * (canvas.width / globalParameters.promotor_length);
+                const endX = Math.abs(globalWindow.end) * (canvas.width / globalParameters.promotor_length) + 10;
+                const windowStart = Math.min(startX, endX) - 10;
+                const windowEnd = Math.max(startX, endX) + 10;
+                const windowHeight = globalResults.length * (promoterHeight + promoterSpacing);
+
+                if (
+                    mouseX >= windowStart &&
+                    mouseX <= windowEnd &&
+                    mouseY >= promoterSpacing &&
+                    mouseY <= promoterSpacing + windowHeight
+                ) {
+                    tooltip.style.display = 'block';
+                    tooltip.style.left = `${event.pageX + 10}px`;
+                    tooltip.style.top = `${event.pageY + 10}px`;
+                    tooltip.textContent = `Global Window: [${globalWindow.start}:${globalWindow.end}], Total Score: ${globalWindow.totalScore.toFixed(2)}`;
+                    tooltipSet = true;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

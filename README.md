@@ -48,3 +48,7 @@ Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre l
 - [clothconcept](projets/clothconcept/README.md) – Application de personnalisation de vêtements avec backend Python et frontend React.
 
 - [SpaceXApp](projets/SpaceXApp/README.md) – Application Android démontrant des lancements SpaceX.
+
+- [Bioinformatique](projets/BioInfo/README.md) – Outil Python d’identification de sites putatifs de liaison aux facteurs de transcription dans des promoteurs, avec visualisation interactive des résultats.
+
+- [IHMA](projets/IHMA/README.md) – Ensemble de projets d’interaction homme-machine : visualisation interactive de données, comparaison de techniques de pointage et clavier virtuel.

@@ -1,0 +1,219 @@
+{
+    "parameters": {
+        "pfm_file": "data/MA0083.3.jaspar",
+        "threshold": -20.0,
+        "promotor_length": 1000,
+        "window_size": 40,
+        "window_threshold": -100.0,
+        "pseudocount": 0.1,
+        "output_file": "results.json",
+        "mrna_ids": [
+            "NM_007389",
+            "NM_079420",
+            "NM_001267550",
+            "NM_002470",
+            "NM_003279",
+            "NM_005159",
+            "NM_003281",
+            "NM_002469",
+            "NM_004997",
+            "NM_004320",
+            "NM_001100",
+            "NM_006757"
+        ]
+    },
+    "results": [
+        {
+            "tf_name": "SRF",
+            "window_range": "[-557:-517]",
+            "window_score": -18.6965389251709,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    0,
+                    "NM_007389",
+                    "SRF",
+                    -557,
+                    -18.6965389251709
+                ]
+            ],
+            "window_num": 0
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-525:-485]",
+            "window_score": -14.602489471435547,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    1,
+                    "NM_079420",
+                    "SRF",
+                    -525,
+                    -14.602489471435547
+                ]
+            ],
+            "window_num": 1
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-197:-157]",
+            "window_score": -3.298003673553467,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    2,
+                    "NM_001267550",
+                    "SRF",
+                    -197,
+                    -3.298003673553467
+                ]
+            ],
+            "window_num": 2
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-459:-419]",
+            "window_score": -13.336933135986328,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    3,
+                    "NM_002470",
+                    "SRF",
+                    -459,
+                    -13.336933135986328
+                ]
+            ],
+            "window_num": 3
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-978:-938]",
+            "window_score": -11.048439025878906,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    4,
+                    "NM_003279",
+                    "SRF",
+                    -978,
+                    -11.048439025878906
+                ]
+            ],
+            "window_num": 4
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-399:-359]",
+            "window_score": -13.0895357131958,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    5,
+                    "NM_005159",
+                    "SRF",
+                    -399,
+                    -13.0895357131958
+                ]
+            ],
+            "window_num": 5
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-790:-750]",
+            "window_score": -6.22613000869751,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    6,
+                    "NM_003281",
+                    "SRF",
+                    -790,
+                    -6.22613000869751
+                ]
+            ],
+            "window_num": 6
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-648:-608]",
+            "window_score": -8.279291152954102,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    7,
+                    "NM_002469",
+                    "SRF",
+                    -648,
+                    -8.279291152954102
+                ]
+            ],
+            "window_num": 7
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-985:-945]",
+            "window_score": -14.512580871582031,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    8,
+                    "NM_004997",
+                    "SRF",
+                    -985,
+                    -14.512580871582031
+                ]
+            ],
+            "window_num": 8
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-34:6]",
+            "window_score": -3.1531875133514404,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    9,
+                    "NM_004320",
+                    "SRF",
+                    -34,
+                    -3.1531875133514404
+                ]
+            ],
+            "window_num": 9
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-352:-312]",
+            "window_score": -5.5067057609558105,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    10,
+                    "NM_001100",
+                    "SRF",
+                    -352,
+                    -5.5067057609558105
+                ]
+            ],
+            "window_num": 10
+        },
+        {
+            "tf_name": "SRF",
+            "window_range": "[-670:-630]",
+            "window_score": -10.596278190612793,
+            "num_occurrences": 1,
+            "occurrences": [
+                [
+                    11,
+                    "NM_006757",
+                    "SRF",
+                    -670,
+                    -10.596278190612793
+                ]
+            ],
+            "window_num": 11
+        }
+    ]
+}
