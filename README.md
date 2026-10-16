@@ -43,6 +43,8 @@ Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre l
 
 - [FTPServer](projets/FTPServer/README.md) – Serveur FTP multi-utilisateurs en Java, avec gestion des connexions en parallèle et transferts en modes actif et passif.
 
+- [FlopBox](projets/FlopBoxProject/README.md) – Ensemble d'applications Java composé d'une passerelle REST vers des serveurs FTP et d'un client de synchronisation de fichiers.
+
 - [clothconcept](projets/clothconcept/README.md) – Application de personnalisation de vêtements avec backend Python et frontend React.
 
 - [SpaceXApp](projets/SpaceXApp/README.md) – Application Android démontrant des lancements SpaceX.

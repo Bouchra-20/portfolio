@@ -1,0 +1,21 @@
+[ {
+  "username" : "bouchra",
+  "password" : "76c7460a03337f0e487c71bdc4f022b79ed098dcdeca28b6a61d527792e27464",
+  "salt" : "lK9mzPevBdJW9HyWmjBv5A==",
+  "allowedServers" : [ "localhost:2121", "localhost:2222", "127.0.0.1:2121", "192.168.1.50:22" ]
+}, {
+  "username" : "alice",
+  "password" : "02add0f23a4c188315a36e4ecbc1470f20498606a0ba4fbd7256cb925047d886",
+  "salt" : "5XnUzmaUsEDIJJchUQvvpw==",
+  "allowedServers" : [ "127.0.0.1:21" ]
+}, {
+  "username" : "admin",
+  "password" : "93df45e3ae30e7f4589955d1436a3af0c6df7ee4a72b0dd5f52a5fb1e2d9606e",
+  "salt" : "erTwn1A0kktcMGL+QNZArA==",
+  "allowedServers" : [ "localhost:2121", "localhost:2222", "127.0.0.1:2121", "192.168.1.50:22" ]
+}, {
+  "username" : "bob",
+  "password" : "20f1783734372262bcc653750b0067dbfb542ca23c7bc9a6ec99e37ef40be92f",
+  "salt" : "1EN3lIxV44+xsZPDr2XX1g==",
+  "allowedServers" : [ ]
+} ]

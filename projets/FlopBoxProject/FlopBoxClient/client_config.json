@@ -1,0 +1,21 @@
+{
+  "proxies": [
+    {
+      "url": "http://localhost:8080",
+      "user": "bouchra",
+      "password": "bouchra",
+      "ftpCredentials": {
+        "localhost:2121": {
+          "user": "bouchra",
+          "pass": "12345"
+        },
+        "localhost:2222": {
+          "user": "user",
+          "pass": "12345"
+        }
+      }
+    }
+  ],
+  "localRoot": "./sync_folder",
+  "intervalSeconds": 10
+}
