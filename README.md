@@ -39,8 +39,8 @@ Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre l
 
 ## Projets
 
+- [TreeFTP](projets/TreeFTP/README.md) – Projet universitaire en Java : outil en ligne de commande qui explore et affiche l’arborescence d’un serveur FTP.
+
 - [clothconcept](projets/clothconcept/README.md) – Application de personnalisation de vêtements avec backend Python et frontend React.
 
 - [SpaceXApp](projets/SpaceXApp/README.md) – Application Android démontrant des lancements SpaceX.
-
-
