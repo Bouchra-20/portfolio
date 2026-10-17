@@ -60,3 +60,5 @@ Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre l
 - [VoteApp](projets/VoteApp/README.md) – Application web de vote en temps réel avec interfaces d’administration et de participation, développée avec Node.js et Socket.IO.
 
 - [VLille](projets/VLille/README.md) – Simulation Java orientée objet d’un service de vélos en libre-service, avec stations, locations, notifications et redistribution.
+
+- [Zombicide](projets/zombicide/README.md) – Jeu de survie en Java dans une ville générée aléatoirement, avec actions des joueurs, équipement et phases de zombies.
