@@ -1,66 +1,80 @@
-# Portfolio
+# Portfolio de Bouchra
 
-Bienvenue sur mon portfolio de projets.
+Bienvenue sur mon portfolio de développement. Ce dépôt rassemble des projets
+universitaires et personnels autour du développement logiciel, des applications
+web, des jeux et de l’analyse de données. Chaque projet dispose d’un README
+dédié qui présente son objectif, ses technologies et, lorsque c’est disponible,
+les instructions pour l’exécuter.
 
-## À propos
-Je m'appelle Bouchra — développeuse polyvalente travaillant avec Java, Python, PHP, C, JavaScript/TypeScript et bases de données (Postgres, MySQL, MongoDB). Ce dépôt rassemble mes projets, démonstrations et notes techniques.
+## Compétences et technologies
 
-## Structure du dépôt
-- index.html — page d'accueil du portfolio
-- README.md — ce fichier
-- .gitignore — exclusions pour plusieurs langages/technologies
-- projets/ — dossier contenant un sous-dossier par projet
-  - projets/mon-projet-exemple/README.md
-
-## Comment ajouter un projet
-1. Crée un nouveau dossier sous `projets/` avec un nom clair (ex: `projets/mon-projet-1`).
-2. Ajoute un `README.md` dans le dossier du projet avec :
-   - Titre
-   - Courte description
-   - Technologies utilisées
-   - Instructions d'installation et d'exécution
-   - Liens (demo, repo séparé, issues)
-3. Commit et push :
-
-```bash
-git add projets/mon-projet-1
-git commit -m "Ajout du projet Mon Projet 1"
-git push
-```
-
-## Mise en avant
-Édite la section "Projets mis en avant" dans `index.html` pour présenter tes meilleurs travaux.
-
-## Licence
-Ce dépôt est sous licence MIT. Voir le fichier LICENSE.
-
-## Contact
-Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre le portfolio public.
+Selon les projets, j’utilise Java, Python, JavaScript et TypeScript, PHP, C,
+ainsi que des outils et technologies de bases de données comme PostgreSQL,
+MySQL et MongoDB. Les projets explorent également le développement web,
+l’informatique en réseau, la programmation orientée objet et l’interaction
+homme-machine.
 
 ## Projets
 
-- [TreeFTP](projets/TreeFTP/README.md) – Projet universitaire en Java : outil en ligne de commande qui explore et affiche l’arborescence d’un serveur FTP.
+### Applications web
 
-- [FTPServer](projets/FTPServer/README.md) – Serveur FTP multi-utilisateurs en Java, avec gestion des connexions en parallèle et transferts en modes actif et passif.
+- [clothconcept](projets/clothconcept/README.md) — Application de
+  personnalisation de vêtements avec un backend Python et un frontend React.
+- [StudentGroup](projets/StudentGroup/README.md) — Application de gestion des
+  étudiants et de leur affectation à des groupes, avec une API Express et
+  MongoDB.
+- [VoteApp](projets/VoteApp/README.md) — Application web de vote en temps réel
+  avec Node.js et Socket.IO.
 
-- [FlopBox](projets/FlopBoxProject/README.md) – Ensemble d'applications Java composé d'une passerelle REST vers des serveurs FTP et d'un client de synchronisation de fichiers.
+### Java et systèmes
 
-- [clothconcept](projets/clothconcept/README.md) – Application de personnalisation de vêtements avec backend Python et frontend React.
+- [FlopBox](projets/FlopBoxProject/README.md) — Ensemble d’applications Java
+  comprenant une passerelle REST vers des serveurs FTP et un client de
+  synchronisation de fichiers.
+- [FTPServer](projets/FTPServer/README.md) — Serveur FTP multi-utilisateurs en
+  Java, avec connexions concurrentes et transferts en modes actif et passif.
+- [TreeFTP](projets/TreeFTP/README.md) — Outil Java en ligne de commande pour
+  explorer et afficher l’arborescence d’un serveur FTP.
+- [VLille](projets/VLille/README.md) — Simulation Java orientée objet d’un
+  service de vélos en libre-service, avec stations, locations, notifications
+  et redistribution.
+- [SpaceXApp](projets/SpaceXApp/README.md) — Application Android consacrée aux
+  lancements SpaceX.
 
-- [SpaceXApp](projets/SpaceXApp/README.md) – Application Android démontrant des lancements SpaceX.
+### Jeux
 
-- [Bioinformatique](projets/BioInfo/README.md) – Outil Python d’identification de sites putatifs de liaison aux facteurs de transcription dans des promoteurs, avec visualisation interactive des résultats.
+- [RailRoadInk](projets/RailRoadInk/README.md) — Jeu Railroad Ink en Python,
+  avec interface Pygame, calcul de score et communication WebSocket.
+- [Zombicide](projets/zombicide/README.md) — Jeu de survie en Java avec ville
+  générée, actions des joueurs, équipement et phases de zombies.
+- [PandemicGame](projets/PandemicGame/README.md) — Jeu coopératif en Java où
+  les joueurs traitent des maladies et recherchent leurs remèdes sur une carte
+  de villes.
 
-- [IHMA](projets/IHMA/README.md) – Ensemble de projets d’interaction homme-machine : visualisation interactive de données, comparaison de techniques de pointage et clavier virtuel.
+### Données et interaction homme-machine
 
-- [RailRoadInk](projets/RailRoadInk/README.md) – Implémentation en Python du jeu de société Railroad Ink, avec interface Pygame, calcul de score et communication WebSocket.
+- [Bioinformatique](projets/BioInfo/README.md) — Outil Python de recherche de
+  sites putatifs de liaison aux facteurs de transcription dans des promoteurs,
+  avec visualisation interactive.
+- [IHMA](projets/IHMA/README.md) — Ensemble de projets d’interaction
+  homme-machine portant sur la visualisation de données, les techniques de
+  pointage et un clavier virtuel.
 
-- [StudentGroup](projets/StudentGroup/README.md) – Application web de gestion des étudiants et de leur affectation à des groupes, avec une API Express et une base MongoDB.
+## Parcourir le dépôt
 
-- [VoteApp](projets/VoteApp/README.md) – Application web de vote en temps réel avec interfaces d’administration et de participation, développée avec Node.js et Socket.IO.
+```text
+.
+├── index.html       # Page d’accueil du portfolio
+├── assets/          # Ressources de la page
+└── projets/         # Projets et documentation associée
+```
 
-- [VLille](projets/VLille/README.md) – Simulation Java orientée objet d’un service de vélos en libre-service, avec stations, locations, notifications et redistribution.
+Pour découvrir un projet, consultez son README dans le dossier correspondant.
+Les prérequis et les commandes d’installation ou d’exécution varient d’un
+projet à l’autre et sont précisés dans sa documentation.
 
-- [Zombicide](projets/zombicide/README.md) – Jeu de survie en Java dans une ville générée aléatoirement, avec actions des joueurs, équipement et phases de zombies.
 
-- [PandemicGame](projets/PandemicGame/README.md) – Jeu coopératif en Java où les joueurs parcourent une carte de villes, traitent des maladies et cherchent leurs remèdes.
+## Licence
+
+Le dépôt est distribué sous licence MIT. Consultez le fichier [LICENSE](LICENSE)
+pour en connaître les conditions.
