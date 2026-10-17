@@ -52,3 +52,7 @@ Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre l
 - [Bioinformatique](projets/BioInfo/README.md) – Outil Python d’identification de sites putatifs de liaison aux facteurs de transcription dans des promoteurs, avec visualisation interactive des résultats.
 
 - [IHMA](projets/IHMA/README.md) – Ensemble de projets d’interaction homme-machine : visualisation interactive de données, comparaison de techniques de pointage et clavier virtuel.
+
+- [RailRoadInk](projets/RailRoadInk/README.md) – Implémentation en Python du jeu de société Railroad Ink, avec interface Pygame, calcul de score et communication WebSocket.
+
+- [StudentGroup](projets/StudentGroup/README.md) – Application web de gestion des étudiants et de leur affectation à des groupes, avec une API Express et une base MongoDB.

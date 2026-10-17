@@ -1,0 +1,414 @@
+/* Réinitialisation et style global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Liens globaux */
+a {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #ff6f61;
+}
+
+/* En-tête */
+header {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6f61;
+}
+
+.main-nav {
+  margin-top: 15px;
+}
+
+.main-nav a {
+  color: #1e90ff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  margin-right: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.2s;
+}
+
+.main-nav a:hover {
+  background-color: #e9ecef;
+  color: #ff6f61;
+}
+
+.main-nav a.active {
+  background-color: #ff6f61;
+  color: #fff;
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 14px;
+  color: #777;
+  background-color: #ffffff;
+  margin-top: 40px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section principale pour index.html */
+.welcome-section {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #48c78e;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #3ba571;
+  transform: translateY(-2px);
+}
+
+/* Section principale pour students.html */
+.student-management {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Zone de création */
+.create-zone {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.create-zone h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #444;
+  margin: 0 0 20px;
+}
+
+#student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#student-form input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#student-form input:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.3);
+  outline: none;
+}
+
+#student-form input::placeholder {
+  color: #999;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+#student-form button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#createUpdate {
+  background-color: #48c78e;
+  color: #fff;
+}
+
+#createUpdate:hover {
+  background-color: #3ba571;
+  transform: translateY(-2px);
+}
+
+#clear {
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+#clear:hover {
+  background-color: #e63946;
+  transform: translateY(-2px);
+}
+
+/* Liste des étudiants */
+.student-list {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.student-list h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #444;
+  margin: 0 0 20px;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+}
+
+#list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+#list li:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#list .button-group {
+  display: flex;
+  gap: 10px; /* Espace entre les boutons Modifier et Supprimer */
+}
+
+#list button {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#list button:first-of-type { /* Bouton "U" (Modifier) */
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+#list button:first-of-type:hover {
+  background-color: #187bcd;
+  transform: scale(1.05);
+}
+
+#list button:last-of-type { /* Bouton "X" (Supprimer) */
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+#list button:last-of-type:hover {
+  background-color: #e63946;
+  transform: scale(1.05);
+}
+
+/* Message */
+#message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Styles pour groups.html */
+#group-container {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#group-sidebar {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#group-sidebar h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #444;
+  font-weight: 500;
+}
+
+#group-list {
+  list-style: none;
+  padding: 0;
+}
+
+.group-item {
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.group-item:hover {
+  background-color: #dee2e6;
+  transform: translateX(5px);
+}
+
+.group-item.active {
+  background-color: #ff6f61;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255, 111, 97, 0.3);
+}
+
+#student-list {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#student-list h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #444;
+  font-weight: 500;
+}
+
+#students li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+#students li:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#students button {
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#students button:hover {
+  background-color: #e63946;
+  transform: scale(1.05);
+}
+
+.group-circles {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: 15px;
+}
+
+.group-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #48c78e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.group-circle:hover {
+  background-color: #3ba571;
+  transform: scale(1.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
