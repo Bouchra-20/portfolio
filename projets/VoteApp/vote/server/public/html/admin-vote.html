@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../javascripts/chart.min.js"></script>
+
+    <title>Admin Page</title>
+<script defer src="../javascripts/admin-bundle.js"></script></head>
+<body>
+  <div class="container">
+    <h1>Vote admin</h1>
+    <div id ="rejected" style="display: none;" class="centered">
+      <p class="fade-in">Connection refusée, il y a déja un administrateur</p>
+  </div>
+  <div id="admin-controls" style="display: none;">
+    <div id="vote">
+      <p>
+          <input type="text" id="text du vote" placeholder="text du vote" />
+          <p id="votant-info" class="fade-in"> Nombre de votants : <span id="nombre-votants">0</span> (connectés  <span id="nombre-connectes">0</span>)</p>
+          <input class="btn" type="button" id="Demarrer le vote" value="Demarrer le vote" />
+      </p>
+      <p id="votant-info" class="fade-in"> Il y a actuellement : <span id="nombre-connectes">0</span> connectés</p>
+    </div>
+    <button class="btn" id="Clore vote" style="display: none;">Clore le vote</button>
+    <div id="chart">
+      <canvas id = "myChart"></canvas>
+  	</div>
+  </div>  
+  <div class="nav-link-container">
+    <a href="/" class="return-link">Retour à l'accueil</a>
+  </div>
+  </div>
+  </body>
+  </html>
+  

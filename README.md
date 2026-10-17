@@ -56,3 +56,5 @@ Ajoute ici ton email ou lien vers ton profil LinkedIn/GitHub si tu veux rendre l
 - [RailRoadInk](projets/RailRoadInk/README.md) – Implémentation en Python du jeu de société Railroad Ink, avec interface Pygame, calcul de score et communication WebSocket.
 
 - [StudentGroup](projets/StudentGroup/README.md) – Application web de gestion des étudiants et de leur affectation à des groupes, avec une API Express et une base MongoDB.
+
+- [VoteApp](projets/VoteApp/README.md) – Application web de vote en temps réel avec interfaces d’administration et de participation, développée avec Node.js et Socket.IO.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../javascripts/chart.min.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <title>Votant Page</title>
+</head>
+<body>
+    <div class="vote-container">
+        <h1>Votant Page</h1>
+        <div class="vote-status" id="vote-status">Vote non commencé</div>
+        <form id="vote-form" class="hidden">
+            <label id="vote-subject">Voter pour :</label>
+            <div class="vote-buttons">
+            <button type="button" class="vote-button vote-pour" data-vote="pour">Pour</button>
+            <button type="button" class="vote-button vote-contre" data-vote="contre">Contre</button>
+            <button type="button" class="vote-button vote-nppv" data-vote="nppv">NPPV</button>
+            <button type="button" class="vote-button vote-abstention" data-vote="abstention">Abstention</button>
+        </div>
+    </form>
+    <canvas id="resultats-chart" class="hidden" style="display: none;">
+    <div id="chart">
+        <canvas id = "myChart"></canvas>
+    </div>
+        </canvas>
+        <div class="nav-link-container">
+            <a href="/" class="return-link">Retour à l'accueil</a>
+        </div>
+    </div>
+</body>
+</html>

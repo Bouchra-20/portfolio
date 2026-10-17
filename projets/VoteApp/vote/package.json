@@ -1,0 +1,35 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "Application de vote",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev-server": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab-etu.fil.univ-lille.fr:bouchra.bouamama.etu/jsfs_tp3.git"
+  },
+  "author": "Bouchra Bouamama",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  }
+}
